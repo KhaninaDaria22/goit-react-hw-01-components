@@ -1,30 +1,49 @@
-import PropTypes from 'prop-types';
 
-const User =({
-    usarename,
+import {
+    Wrapper,
+    Container,
+    Avatar,
+    Username,
+    Tag,
+    Location,
+    StatsList,
+    StatsItem,
+    Label,
+    Quantity,
+} from './Profile.styled';
+
+
+const Profile = ({
+    avatar = 'https://dummyimage.com/480x480/2a2a2a/ffffff&text=Product+image+placeholder',
+    username,
     tag,
     location,
-    avatar,
-    stats,
+    stats: { followers, views, likes },
 }) => {
     return (
-        <div class="profile">
-        <div class="description">
-            <img
-            src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-            alt="User avatar"
-            class="avatar"
-            />
-            <p class="name">Petra Marica</p>
-            <p class="tag">@pmarica</p>
-            <p class="location">Salvador, Brasil</p>
-        </div>
-        <ul class="stats">
-            <li>
-            <span class="label">Followers</span>
-            <span class="quantity">1000</span>
-            </li>
-        </ul>
-        </div>
-    )
+        <Wrapper>
+        <Container>
+          <Avatar src={avatar} alt="User avatar" width={150} />
+          <Username>{username}</Username>
+          <Tag>@{tag}</Tag>
+          <Location>{location}</Location>
+        </Container>
+        <StatsList>
+          <StatsItem>
+            <Label>Followers</Label>
+            <Quantity>{followers}</Quantity>
+          </StatsItem>
+          <StatsItem>
+            <Label>Views</Label>
+            <Quantity>{views}</Quantity>
+          </StatsItem>
+          <StatsItem>
+            <Label>Likes</Label>
+            <Quantity>{likes}</Quantity>
+          </StatsItem>
+        </StatsList>
+      </Wrapper>
+    );
 }
+
+export default Profile;
