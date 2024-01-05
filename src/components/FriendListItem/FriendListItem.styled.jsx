@@ -1,10 +1,10 @@
 import styled from '@emotion/styled'
-// import { theme } from 'Constans/theme';
+import { theme } from 'Constans/theme';
 
 
-// const onlineStatus = ({ status, theme }) => {
-//   return status ? theme.colors.green : theme.colors.red;
-// }; 
+const onlineStatus = ({ status, theme }) => {
+  return status ? theme.colors.green : theme.colors.red;
+}; 
 
 export const Friend = styled.li`
   display: flex;
@@ -25,7 +25,7 @@ export const Status = styled.span`
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: #808000;
+  background-color: ${onlineStatus};
 `;
 
 export const Avatar = styled.img`

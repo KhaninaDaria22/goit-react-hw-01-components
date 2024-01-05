@@ -31,14 +31,14 @@ export const Username = styled.h3`
 `;
 
 export const Tag = styled.p`
-    color: #f1f1f1;
+    color: 	#000000;
 `;
 
 export const Location = styled.p`
     font-size: 1.05em;
     line-height: 1.11;
     letter-spacing: -0.5px;
-    color: #f1f1f1;
+    color: 	#000000;
 `;
 
 export const StatsList = styled.ul`
