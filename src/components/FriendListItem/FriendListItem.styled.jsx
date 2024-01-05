@@ -1,6 +1,4 @@
 import styled from '@emotion/styled'
-import { theme } from 'Constans/theme';
-
 
 const onlineStatus = ({ status, theme }) => {
   return status ? theme.colors.green : theme.colors.red;
